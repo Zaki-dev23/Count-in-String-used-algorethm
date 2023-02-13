@@ -1,0 +1,12 @@
+ALGORITHM Add_three_number
+VAR
+    v1,v2,v3 : INTEGER;
+    sum : INTEGER := 0 ;
+BEGIN
+    Read(v1)
+    Read(v2)
+    Read(v3)
+    sum = v1 + v2 + v3 ;
+    Write(sum)
+
+END
