@@ -1,12 +1,29 @@
-ALGORITHM Add_three_number
+ALGORITHM vowel_count
 VAR
-    v1,v2,v3 : INTEGER;
-    sum : INTEGER := 0 ;
+    str : STRING ;
+    lenght : INTEGER :=0 ;
+    word_Nbr : INTEGER :=0 ;
+    vowel_Nbr : INTEGER :=0 ;
+    index : INTEGER := 0 ;
+    bool : treuty := TRUE ;
 BEGIN
-    Read(v1)
-    Read(v2)
-    Read(v3)
-    sum = v1 + v2 + v3 ;
-    Write(sum)
+    Read(str);
+    WHILE (treuty) DO
+        IF (str[lenght]<>" ") THEN
+            word_Nbr := word_Nbr + 1;
+        END_IF
+        IF (str[lenght]="a" OR str[lenght]="e" OR str[lenght]="u" OR str[lenght]="y" OR str[lenght]="i" OR str[lenght]="o") THEN
+            vowel_Nbr := vowel_Nbr + 1;
+        END_IF
+        IF (str[lenght] = ".") THEN
+            treuty := FALSE
+        END_IF
+        
+         lenght := lenght + 1;
+    END_WHILE
+
+    Write(lenght);
+    Write(word_Nbr);
+    Write(vowel_Nbr);
 
 END
